@@ -10,23 +10,23 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
         chooser();
-
-
     }
 
     public static void addUserInfo() throws IOException {
-        Set<User> set = new HashSet<>();
         File file = new File("C:/stud/solo.txt");
         Scanner scanner = new Scanner(System.in);
         User user = new User();
-        System.out.println("Введите свой ник");
-        String username = scanner.nextLine();
-        if(searchByUsername(readUserinfo(), username) != null) {
-            System.out.println("user already exists");
-        } else user.setUserName(username);
-        user.setUserName(scanner.nextLine());
+        String username;
+        while (true) {
+            System.out.println("Введите свой ник");
+            username = scanner.nextLine();
+            if (searchByUsername(readUserinfo(), username) != null) {
+                System.out.println("user already exists");
+            } else break;
+        }
+        user.setUserName(username);
+
         System.out.println("Введите свою Фамилию");
         user.setFirstName(scanner.nextLine());
         System.out.println("Введите своё Имя");
@@ -45,7 +45,7 @@ public class Main {
             user1 += user.toString();
             Files.write(Paths.get(file.getPath()), user1.getBytes(), StandardOpenOption.APPEND);
         }
-        for (int i = 0; i<file.length(); i++){
+        for (int i = 0; i < file.length(); ++i) {
 
         }
     }
@@ -72,9 +72,11 @@ public class Main {
         }
         for (String s : list) {
             String[] del = s.replace("\"", "").replace("{", "").replace("}", "").split(",");
-            for (int i = 0; i < del.length; i++) {
+            for (int i = 0; i < del.length; ++i) {
                 String[] str = del[i].split(":");
+//                System.out.println(str[0] + " " + str[1]);
                 map.put(str[0], str[1]);
+
             }
             User user = new User();
             user.setId(Long.parseLong(map.get("UserID")));
@@ -107,13 +109,14 @@ public class Main {
 
         }
     }
-        public static void searchByLastName(List<User> users, String userlastname){
-        for (User u : users){
-            if(u.getLastName().equals(userlastname)){
+
+    public static void searchByLastName(List<User> users, String userlastname) {
+        for (User u : users) {
+            if (u.getLastName().equals(userlastname)) {
                 System.out.println(u.getLastName());
             }
-            }
         }
+    }
 
     public static void printUsers(List<User> users) {
         for (User u : users) {
@@ -141,7 +144,7 @@ public class Main {
                 System.out.println("Поиск по почте");
                 searchByMail(readUserinfo(), scanner.nextLine());
                 break;
-            case"searchByLastName":
+            case "searchByLastName":
                 System.out.println("Поиск по отчеству");
                 searchByLastName(readUserinfo(), scanner.nextLine());
         }
