@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private long id;
     private String userName;
@@ -8,7 +11,15 @@ public class User {
     private String lastName;
     private String userMail;
     private String userPassword;
+    public List<Cat> cats = new ArrayList<>();
 
+    public List<Cat> getCats() {
+        return cats;
+    }
+
+    public void setCats(List<Cat> cats) {
+        this.cats = cats;
+    }
 
     public long getId() {
         return id;
