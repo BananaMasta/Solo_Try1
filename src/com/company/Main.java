@@ -11,34 +11,49 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        test();
+        stud();
+
+    }
+
+    public static void stud() {
+        Integer a = 12;
+        Integer b = 12;
+        Fish fish = new Fish("ghgh", "kjlkj");
+        Fish fish1 = new Fish("lolo", "lolo");
+        Fish fish2 = new Fish("ghgh", "kjlkj");
+        System.out.println(fish == fish1);
+        System.out.println(a == b);
+        System.out.println(fish.hashCode());
+        System.out.println(fish2.hashCode());
+        System.out.println(fish1.hashCode());
 
 
     }
 
-    public static void test() {
-        List<Cat> cats = new ArrayList<>();
-        User user = new User();
-        for (int i = 0; i < 2; i++) {
-            Cat cat = new Cat();
-            cat.setName(UUID.randomUUID().toString());
-            cats.add(cat);
-        }
-        user.setCats(cats);
 
-        for (Cat s : user.getCats()) {
-            System.out.println(s.getName());
-        }
+//    public static void test() {
+//        User user = new User();
+//        for (int i = 0; i < 2; i++) {
+//            Cat cat = new Cat();
+//            cat.setName(UUID.randomUUID().toString());
+//            user.addCat(cat);
+//            user.delCat(cat);
+//        }
+//
+//        for (Cat s : user.getCats()) {
+//            System.out.println(s.getName());
+//        }
+//
+//    }
 
-    }
     public static void addUserInfo() throws IOException {
-        Set<User> set = new HashSet<>();
+//        Set<User> set = new HashSet<>();
         File file = new File("C:/stud/solo.txt");
         Scanner scanner = new Scanner(System.in);
         User user = new User();
         System.out.println("Введите свой ник");
         String username = scanner.nextLine();
-        if(searchByUsername(readUserinfo(), username) != null) {
+        if (searchByUsername(readUserinfo(), username) != null) {
             System.out.println("user already exists");
         } else user.setUserName(username);
         user.setUserName(scanner.nextLine());
@@ -60,7 +75,7 @@ public class Main {
             user1 += user.toString();
             Files.write(Paths.get(file.getPath()), user1.getBytes(), StandardOpenOption.APPEND);
         }
-        for (int i = 0; i<file.length(); i++){
+        for (int i = 0; i < file.length(); i++) {
 
         }
     }
@@ -122,13 +137,14 @@ public class Main {
 
         }
     }
-        public static void searchByLastName(List<User> users, String userlastname){
-        for (User u : users){
-            if(u.getLastName().equals(userlastname)){
+
+    public static void searchByLastName(List<User> users, String userlastname) {
+        for (User u : users) {
+            if (u.getLastName().equals(userlastname)) {
                 System.out.println(u.getLastName());
             }
-            }
         }
+    }
 
     public static void printUsers(List<User> users) {
         for (User u : users) {
@@ -156,7 +172,7 @@ public class Main {
                 System.out.println("Поиск по почте");
                 searchByMail(readUserinfo(), scanner.nextLine());
                 break;
-            case"searchByLastName":
+            case "searchByLastName":
                 System.out.println("Поиск по отчеству");
                 searchByLastName(readUserinfo(), scanner.nextLine());
         }

@@ -1,15 +1,17 @@
 package com.company;
 
-public class Cat extends Animal {
+public class Dog extends Animal {
     @Override
     public void anim() {
-        System.out.println("Я Кот ");
+        System.out.println("Я собака");
     }
 
     @Override
     public void anim(String name, String type) {
-        name = "Kit";
-        type = " Kit";
+        name = "Doge";
+        type = " Doge";
         System.out.println(name + type);
+
     }
 }
+

@@ -12,6 +12,23 @@ public class User {
     private String userMail;
     private String userPassword;
     public List<Cat> cats = new ArrayList<>();
+    public Fish fish;
+
+    public User(Fish fish) {
+        this.fish = fish;
+    }
+
+    public User() {
+
+    }
+
+    public void delCat(Cat cat) {
+        cats.remove(cat);
+    }
+
+    public void addCat(Cat cat) {
+        cats.add(cat);
+    }
 
     public List<Cat> getCats() {
         return cats;
