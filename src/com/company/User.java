@@ -2,8 +2,12 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class User {
+
+    private static int count = 0;
+
     private long id;
     private String userName;
     private String firstName;
@@ -18,8 +22,12 @@ public class User {
         this.fish = fish;
     }
 
-    public User() {
 
+    public User() {
+    }
+
+    public static void printCount() {
+        System.out.println(count);
     }
 
     public void delCat(Cat cat) {
@@ -29,6 +37,22 @@ public class User {
     public void addCat(Cat cat) {
         cats.add(cat);
     }
+
+
+    public static void usersCat(User user) {
+        for (Cat cat : user.cats) {
+            System.out.println(cat.getName());
+        }
+
+    }
+    public static void userCats(User user, String name){
+        for (Cat cat: user.cats){
+          if(cat.name.equals(name)) {
+              System.out.println(cat.getName());
+          }
+        }
+    }
+
 
     public List<Cat> getCats() {
         return cats;

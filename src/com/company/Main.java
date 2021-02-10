@@ -10,8 +10,35 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        Cat cat = new Cat();
+//        Dog dog = new Dog();
+        AnimaUtil.catName();
+//        AnimaUtil.dogName();
 
-        stud();
+
+
+
+
+
+
+
+
+
+
+
+//        Cat cat = new Cat("Biba");
+//        Cat cat1 = new Cat("Boba");
+//        User user = new User();
+//        Cat cat = new Cat();
+//        Cat cat1 = new Cat();
+//        cat.setName("Bob");
+//        cat1.setName("Gary");
+//        user.addCat(cat);
+//        user.addCat(cat1);
+//        User.userCats(user, "Bob");
+//        test();
+//       User.printCount();
+//        stud();
 
     }
 
@@ -31,23 +58,18 @@ public class Main {
     }
 
 
-//    public static void test() {
-//        User user = new User();
-//        for (int i = 0; i < 2; i++) {
-//            Cat cat = new Cat();
-//            cat.setName(UUID.randomUUID().toString());
-//            user.addCat(cat);
-//            user.delCat(cat);
-//        }
-//
-//        for (Cat s : user.getCats()) {
-//            System.out.println(s.getName());
-//        }
-//
-//    }
+    public static void test() {
+        User user = new User();
+        for (int i = 0; i < 2; i++) {
+            Cat cat = new Cat();
+            cat.setName(UUID.randomUUID().toString());
+            user.addCat(cat);
+        }
+        User.usersCat(user);
+    }
 
     public static void addUserInfo() throws IOException {
-//        Set<User> set = new HashSet<>();
+        Set<User> set = new HashSet<>();
         File file = new File("C:/stud/solo.txt");
         Scanner scanner = new Scanner(System.in);
         User user = new User();
