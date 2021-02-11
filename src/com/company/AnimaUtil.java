@@ -1,36 +1,44 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
-public class AnimaUtil {
-    public List<Cat> catNames = new ArrayList<>();
-//    public List<Dog> dogNames = new ArrayList<>();
+public class AnimaUtil  {
+    public static int catNum;
 
     public static void catName() {
         Cat cat = new Cat();
-        Random random = new Random();
-        String[] catName = {"Барсик", "Мася", "Биба", "Борис", "Мурзик"};
-        for (int i = 0; i < catName.length; i++) {
-            int pos = random.nextInt(catName.length);
+        String[] catNames = {"Биба", "Мася", "Мурзик", "Борис", "Джек"};
+
+        List<String> catNam = null;
+        Random rnd = new Random();
+        for (int i = 0; i < catNum++; i++) {
+            if (catNam == null || catNam.size() == 0) {
+                catNam = new ArrayList<>(Arrays.asList(catNames));
+            }
+            String catName = catNam.remove(rnd.nextInt(catNam.size()));
             if (cat instanceof Animal) {
-                System.out.println(catName[pos]);
+                System.out.println(catName);
             }
         }
     }
 
 
-//    public static void dogName() {
-//        Dog dog = new Dog();
-//        Random random = new Random();
-//        String[] dogName = {"Бобик", "Кита", "Боба", "Джесси", "Шарик"};
-//        for (int i = 0; i < dogName.length; i++) {
-//            int pos = random.nextInt(dogName.length);
-//            if (dog instanceof Animal) {
-//                System.out.println(dogName[pos]);
-//            }
-//        }
-//    }
+    public static void dogName() {
+        Dog dog = new Dog();
+        String[] dogNames = {"Боба", "Шарик", "Гринч", "Майк", "Кактус"};
+
+        List<String> dogNam = null;
+        Random rnd = new Random();
+        for (int i = 0; i < dogNames.length; i++) {
+            if (dogNam == null || dogNam.size() == 0) {
+                dogNam = new ArrayList<>(Arrays.asList(dogNames));
+            }
+            String dogName = dogNam.remove(rnd.nextInt(dogNam.size()));
+            if (dog instanceof Animal) {
+                System.out.println(dogName);
+            } else System.out.println("Собака не собака");
+        }
+    }
 }
+
 

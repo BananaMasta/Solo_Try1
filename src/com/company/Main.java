@@ -10,24 +10,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Cat cat = new Cat();
-//        Dog dog = new Dog();
-        AnimaUtil.catName();
+ AnimaUtil.catName();
+
 //        AnimaUtil.dogName();
-
-
-
-
-
-
-
-
-
-
-
-
-//        Cat cat = new Cat("Biba");
-//        Cat cat1 = new Cat("Boba");
 //        User user = new User();
 //        Cat cat = new Cat();
 //        Cat cat1 = new Cat();
