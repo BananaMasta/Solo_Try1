@@ -6,13 +6,13 @@ import java.util.UUID;
 
 public class Cat extends Animal {
 
-    public static int catNum;
+    public static int catNum = 0;
 
     Cat() {
         catNum++;
         System.out.println(catNum);
     }
-    Cat(String name){
+      Cat(String name){
         this.name=name;
         System.out.println(this.getName());
     }

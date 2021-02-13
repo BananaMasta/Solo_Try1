@@ -10,20 +10,8 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
- AnimaUtil.catName();
-
-//        AnimaUtil.dogName();
-//        User user = new User();
-//        Cat cat = new Cat();
-//        Cat cat1 = new Cat();
-//        cat.setName("Bob");
-//        cat1.setName("Gary");
-//        user.addCat(cat);
-//        user.addCat(cat1);
-//        User.userCats(user, "Bob");
-//        test();
-//       User.printCount();
-//        stud();
+        AnimaUtil.animalName(new Cat());
+        AnimaUtil.animalName(new Dog());
 
     }
 

@@ -5,7 +5,7 @@ public class Dog extends Animal {
 
     Dog(){
         dogNum++;
-        System.out.println(dogNum);
+        System.out.println();
     }
 
     @Override
