@@ -15,12 +15,14 @@ public class Fish extends Animal {
     }
 
     @Override
-    public void anim(String name, String type) {
-        System.out.println(name + type);
-    }
+    public void anim(int height, int power) {
+        height = 5;
+        power = 2;
+        System.out.println(stat);
 
-    @Override
-    public boolean equals(Object obj) {
-        return this.name.equals(((Fish) obj).name);
+//        @Override
+//        public boolean equals (Object obj){
+//            return this.name.equals(((Fish) obj).name);
+//        }
     }
 }

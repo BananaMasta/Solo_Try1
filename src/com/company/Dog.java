@@ -14,11 +14,10 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void anim(String name, String type) {
-        name = "Doge";
-        type = " Doge";
-        System.out.println(name + type);
-
+    public void anim(int height, int power) {
+        height = 10;
+        power = 5;
+        System.out.println(stat);
     }
 }
 

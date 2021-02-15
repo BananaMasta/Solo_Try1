@@ -1,11 +1,28 @@
 package com.company;
 
 public abstract class Animal {
-
+    int height;
+    int power;
+    int stat;
     String id;
     String name;
     String type;
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
 
     public String getType() {
         return type;
@@ -35,10 +52,14 @@ public abstract class Animal {
         System.out.println("Я животное");
     }
 
-    public void anim(String name, String type) {
-        name = "Sobaka";
-        type = "Kit";
-        System.out.println(name + type);
-    }
+    //    public void anim(String name, String type) {
+//        name = "Sobaka";
+//        type = "Kit";
+//        System.out.println(name + type);
+//    }
+    public void anim(int height, int power) {
+        height = 1;
+        power = 1;
 
+    }
 }

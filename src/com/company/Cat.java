@@ -24,9 +24,9 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void anim(String name, String type) {
-        name = "Kit";
-        type = " Kit";
-        System.out.println(name + type);
+    public void anim(int height, int power) {
+        height = 9;
+        power = 10;
+        System.out.println(stat);
     }
 }

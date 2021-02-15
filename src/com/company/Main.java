@@ -170,6 +170,7 @@ public class Main {
             case "searchByLastName":
                 System.out.println("Поиск по отчеству");
                 searchByLastName(readUserinfo(), scanner.nextLine());
+            case "fight":
         }
     }
 }
