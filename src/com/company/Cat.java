@@ -12,9 +12,10 @@ public class Cat extends Animal {
         catNum++;
         System.out.println(catNum);
     }
-      Cat(String name){
-        this.name=name;
-        System.out.println(this.getName());
+
+    Cat(String name) {
+        this.name = name;
+
     }
 
 
@@ -23,10 +24,5 @@ public class Cat extends Animal {
         System.out.println("Я Кот ");
     }
 
-    @Override
-    public void anim(int height, int power) {
-        height = 9;
-        power = 10;
-        System.out.println(stat);
-    }
+
 }

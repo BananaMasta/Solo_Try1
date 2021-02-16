@@ -52,14 +52,14 @@ public abstract class Animal {
         System.out.println("Я животное");
     }
 
-    //    public void anim(String name, String type) {
+    //        public void anim(String name, String type) {
 //        name = "Sobaka";
 //        type = "Kit";
 //        System.out.println(name + type);
 //    }
-    public void anim(int height, int power) {
-        height = 1;
-        power = 1;
-
+    public void animFight(int height, int power) {
+        this.height = height;
+        this.power = power;
+        this.stat = (this.height + this.power) / 2;
     }
 }

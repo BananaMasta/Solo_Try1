@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public class AnimaUtil extends Animal {
+public class AnimaUtil {
     public static void animalName(Animal animal) {
 
         String[] catNames = {"Биба", "Мася", "Мурзик", "Борис", "Джек"};
@@ -19,12 +19,12 @@ public class AnimaUtil extends Animal {
         System.out.println(animal.getName());
     }
 
-    public void fight() {
-        anim(50, 68);
-        anim(234, 24);
-        stat = (height+power)/2;
-        if (stat.equals(stat)) {
-            System.out.println(getName());
-        } else System.out.println("Ничья");
+    public static void fight(Animal... animals) {
+        if(animals[0].stat > animals[1].stat) {
+            System.out.println(animals[0].getName());
+        }else if (animals[0].stat < animals[1].stat){
+            System.out.println(animals[1].getName());
+        }else System.out.println("Ничья");
+        // if(animals)
     }
 }

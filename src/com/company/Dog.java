@@ -7,17 +7,15 @@ public class Dog extends Animal {
         dogNum++;
         System.out.println();
     }
+    Dog(String name) {
+        this.name = name;
+    }
 
     @Override
     public void anim() {
         System.out.println("Я собака");
     }
 
-    @Override
-    public void anim(int height, int power) {
-        height = 10;
-        power = 5;
-        System.out.println(stat);
-    }
+
 }
 
