@@ -1,14 +1,15 @@
 package com.company;
 
-public abstract class Animal {
-    int height;
-    int power;
-    int stat;
+public
+class Animal {
+    double height;
+    double power;
+    double stat;
     String id;
     String name;
     String type;
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
@@ -16,7 +17,7 @@ public abstract class Animal {
         this.height = height;
     }
 
-    public int getPower() {
+    public double getPower() {
         return power;
     }
 
@@ -57,9 +58,14 @@ public abstract class Animal {
 //        type = "Kit";
 //        System.out.println(name + type);
 //    }
-    public void animFight(int height, int power) {
+    public void animFight(double height, double power) {
         this.height = height;
         this.power = power;
         this.stat = (this.height + this.power) / 2;
     }
+    public  static void fog(){
+        int a = 6;
+        System.out.println(a);
+    }
+
 }

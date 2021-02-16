@@ -12,12 +12,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
 //        AnimaUtil.animalName(new Cat());
 //        AnimaUtil.animalName(new Dog());
-        Cat cat = new Cat("ee");
-        Dog dog = new Dog("ww");
-        dog.animFight(5, 6);
-        cat.animFight(4, 5);
-        AnimaUtil.fight(cat,dog);
-
+//        Cat cat = new Cat("Erl"," Cat");
+//       Dog dog = new Dog("Well"," Doge");
+//        Fish fish = new Fish();
+//       dog.animFight(5, 6);
+//        cat.animFight(5, 5);
+//        AnimaUtil.fight(fish,cat);
+//        AnimaUtil.fight(dog,cat);
+AnimaUtil.circle2();
     }
 
     public static void stud() {
@@ -177,6 +179,10 @@ public class Main {
                 searchByLastName(readUserinfo(), scanner.nextLine());
             case "fight":
         }
+    }
+
+    public static class MyMain {
+
     }
 }
 

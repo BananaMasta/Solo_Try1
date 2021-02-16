@@ -128,4 +128,5 @@ public class User {
                 "\"UserMail\":\"" + this.userMail + "\"," +
                 "\"UserPassword\":\"" + this.userPassword + "\"}";
     }
+    Animal animal = new Animal();
 }

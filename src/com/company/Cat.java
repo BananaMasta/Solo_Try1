@@ -13,9 +13,9 @@ public class Cat extends Animal {
         System.out.println(catNum);
     }
 
-    Cat(String name) {
+    Cat(String name, String type) {
         this.name = name;
-
+        this.type = type;
     }
 
 

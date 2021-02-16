@@ -1,7 +1,7 @@
 package com.company;
 
 public class Fish extends Animal {
-    public Fish(String name, String type) {
+    Fish(String name, String type) {
         this.name = name;
         this.type = type;
     }
