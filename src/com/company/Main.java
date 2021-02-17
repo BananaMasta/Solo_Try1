@@ -8,8 +8,26 @@ import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class Main {
+    public static class Grop{
+
+    }
+    public class Grip{
+
+    }
 
     public static void main(String[] args) throws IOException {
+        Main m = new Main();
+        Main.Grop grop = new Grop();
+        Main.Grip grip = m.new Grip();
+        Main.Grip grip1 = new Grip();
+        Try t = new Try();
+        Try.staticClass ts = new Try.staticClass();
+        Try.publicClass tp = t.new publicClass();
+        ts.just();
+        tp.group();
+//        AnimaUtil.circle2();
+
+
 //        AnimaUtil.animalName(new Cat());
 //        AnimaUtil.animalName(new Dog());
 //        Cat cat = new Cat("Erl"," Cat");
@@ -19,7 +37,11 @@ public class Main {
 //        cat.animFight(5, 5);
 //        AnimaUtil.fight(fish,cat);
 //        AnimaUtil.fight(dog,cat);
-AnimaUtil.circle2();
+    }
+    public static void test1(){
+        Try t = new Try();
+        Try.staticClass ts = new Try.staticClass();
+        Try.publicClass tp = t.new publicClass();
     }
 
     public static void stud() {
@@ -181,9 +203,6 @@ AnimaUtil.circle2();
         }
     }
 
-    public static class MyMain {
-
-    }
 }
 
 
